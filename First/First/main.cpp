@@ -7,8 +7,6 @@
 #include <mutex>
 #include <queue>
 
-std::queue<int> firstQue;
-std::mutex m;
 
 int main() {
 
@@ -43,9 +41,9 @@ int main() {
 //	
 //	//std::vector <setData_class> setData;
 //
-//	/*setData_class *qwe = new setData_class[];
+//	
 //
-//	delete[] qwe;*/
+//	
 //	
 //	
 //
