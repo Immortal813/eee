@@ -17,35 +17,3 @@ int main() {
 
 }
 
-
-//void run( std::string threadName ) {
-//
-//	for ( int i = 0; i < 10; i++ ) {
-//	
-//		std::string out = threadName + std::to_string( i ) + "\n";
-//		std::cout << out;
-//		
-//	}
-//
-//}
-//
-//
-//int main()
-//{
-//	
-//	std::thread tA( run, "A" );
-//	std::thread tB( run, "\tB" );
-//	tA.join();
-//	tB.join();
-//	//setData_class setData;
-//	
-//	//std::vector <setData_class> setData;
-//
-//	
-//
-//	
-//	
-//	
-//
-//	return 0;
-//}
