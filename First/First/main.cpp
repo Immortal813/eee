@@ -52,13 +52,34 @@ VOID PrintProcessList( HANDLE CONST hStdOut ) {
 }
 
 
+DWORD dwProcessId = 0x00F900, dwPid = 0;
+HWND hWnd;
+
+
+void start(  ) {
+
+	ShellExecuteA( NULL, NULL, "mspaint", NULL, NULL, SW_MAXIMIZE );
+	//ShowWindow();
+
+}
+
+
 
 INT main() {
 
-	POINT pt, pt2, buff;
+	//start();
 	
-	
+	HWND hWnd = FindWindow( NULL, "Name..." ); // Ищем HWND окна по имени
+	ShowWindow( hWnd,SW_RESTORE );
+
+
+	//SetCursorPos( 30, 33 );
+	//mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
+
+
+	//==========================================
 	//SetCursorPos(15, 15 );
+	/*POINT pt, pt2, buff;
 	while (1) {
 		
 		GetCursorPos( &pt );
@@ -67,14 +88,16 @@ INT main() {
 		std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
 		std::cout << "=========================" << std::endl;
 		
+		Sleep( 2000 );
+		
 
-	}
+	}*/
 
 	//================================
 
-	//HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
-	//PrintProcessList( hStdOut );
-	//ExitProcess( 0 );
+	/*HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
+	PrintProcessList( hStdOut );
+	ExitProcess( 0 )*/;
 	return 0;
 }
 
