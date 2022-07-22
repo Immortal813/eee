@@ -52,27 +52,107 @@ VOID PrintProcessList( HANDLE CONST hStdOut ) {
 }
 
 
-DWORD dwProcessId = 0x00F900, dwPid = 0;
-HWND hWnd;
 
 
-void start(  ) {
+/*void start(  ) {
 
 	ShellExecuteA( NULL, NULL, "mspaint", NULL, NULL, SW_MAXIMIZE );
 	//ShowWindow();
+
+}*/
+
+//Взятие координат мышки 
+void mouseCoord() {
+
+	POINT pt, pt2, buff;
+	while ( 1 ) {
+
+		GetCursorPos( &pt );
+		pt2 = pt;
+
+		std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
+		std::cout << "=========================" << std::endl;
+
+		Sleep( 2000 );
+
+
+	}
+
+}
+
+//Функция ищет и открывает неоходимое окно. Возвращает 0, если такого окна не существует.
+bool findAndOpenWin() {
+
+	HWND hWnd = FindWindow( NULL, TEXT( "Безымянный - Paint" ) );
+	bool check;
+	if ( hWnd == NULL ) {
+
+		MessageBox( hWnd, TEXT( "Need open Paint" ), TEXT( "Error" ), MB_OK | MB_ICONSTOP );
+		check = 0;
+	}
+	else {
+		//Не отображает окно, если оно развернуто -_-
+		ShowWindow( hWnd, SW_MAXIMIZE );
+		check = 1;
+	}
+
+	return check;
+
+}
+
+void mouseClick() {
+
+	SetCursorPos( 30, 33 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
+	//=========
+	Sleep( 500 );
+	SetCursorPos( 84, 423 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 84, 423, 0, 0 );
+	Sleep( 500 );
+	//=========
+	SetCursorPos( 851, 654 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 851, 654, 0, 0 );
+	Sleep( 500 );
+	//=========
+	SetCursorPos( 993, 658 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 993, 658, 0, 0 );
+	//=========
+	SetCursorPos( 530, 64 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 530, 64, 0, 0 );
+	//=========ЗАЖАТЬ
+	SetCursorPos( 316, 331 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN , 316, 331, 0, 0 );
+	//=========ОТПУСТИТЬ
+	SetCursorPos( 526, 449 );
+	mouse_event( MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
+	//=========
+	
+
 
 }
 
 
 
-INT main() {
+int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
+
+	findAndOpenWin();
+	mouseClick();
 
 	//start();
+
+	//LPCWSTR WindowsName = ( LPCWSTR)"mspaint";
 	
-	HWND hWnd = FindWindow( NULL, "Name..." ); // Ищем HWND окна по имени
-	ShowWindow( hWnd,SW_RESTORE );
+	
+	//=================================
+	/*HWND h = FindWindowA( NULL, "Калькулятор" ); // Ищем HWND окна по имени
+	
 
+	if ( h == NULL )
+		MessageBox( h, TEXT( "Необходимо открыть \"Калькулятор\"" ), TEXT( "Ошибка!!!" ), MB_OK | MB_ICONSTOP );*/
+	
 
+	
+	
 	//SetCursorPos( 30, 33 );
 	//mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
 
@@ -81,15 +161,15 @@ INT main() {
 	//SetCursorPos(15, 15 );
 	/*POINT pt, pt2, buff;
 	while (1) {
-		
+
 		GetCursorPos( &pt );
 		pt2 = pt;
 
 		std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
 		std::cout << "=========================" << std::endl;
-		
+
 		Sleep( 2000 );
-		
+
 
 	}*/
 
@@ -103,14 +183,9 @@ INT main() {
 
 
 
-/*int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
+/*int main() {
 
-
-
-
-
-	return 0;
-
+	mouseCoord();
 
 }*/
 
