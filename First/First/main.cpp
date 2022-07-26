@@ -1,10 +1,9 @@
 ﻿#include <Windows.h>
 #include <TlHelp32.h>
-
 #include <iostream>
-#include "getData_class.h"
-#include "setData_class.h"
 #include <string>
+#include <chrono>
+#include "mouse_class.hpp"
 
 
 VOID PrintModuleList( HANDLE CONST hStdOut, DWORD CONST dwProcessId ) {
@@ -52,6 +51,7 @@ VOID PrintProcessList( HANDLE CONST hStdOut ) {
 }
 
 
+mouse_class glass;
 
 
 /*void start(  ) {
@@ -63,12 +63,12 @@ VOID PrintProcessList( HANDLE CONST hStdOut ) {
 
 //Взятие координат мышки 
 void mouseCoord() {
-
-	POINT pt, pt2, buff;
+	
+	POINT pt;
 	while ( 1 ) {
 
 		GetCursorPos( &pt );
-		pt2 = pt;
+
 
 		std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
 		std::cout << "=========================" << std::endl;
@@ -121,12 +121,12 @@ void mouseClick() {
 	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 530, 64, 0, 0 );
 	//=========ЗАЖАТЬ
 	SetCursorPos( 316, 331 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN , 316, 331, 0, 0 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN, 316, 331, 0, 0 );
 	//=========ОТПУСТИТЬ
 	SetCursorPos( 526, 449 );
 	mouse_event( MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
 	//=========
-	
+
 
 
 }
@@ -141,43 +141,43 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 	//start();
 
 	//LPCWSTR WindowsName = ( LPCWSTR)"mspaint";
-	
-	
+
+
 	//=================================
 	/*HWND h = FindWindowA( NULL, "Калькулятор" ); // Ищем HWND окна по имени
-	
+
 
 	if ( h == NULL )
 		MessageBox( h, TEXT( "Необходимо открыть \"Калькулятор\"" ), TEXT( "Ошибка!!!" ), MB_OK | MB_ICONSTOP );*/
-	
-
-	
-	
-	//SetCursorPos( 30, 33 );
-	//mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
 
 
-	//==========================================
-	//SetCursorPos(15, 15 );
-	/*POINT pt, pt2, buff;
-	while (1) {
-
-		GetCursorPos( &pt );
-		pt2 = pt;
-
-		std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
-		std::cout << "=========================" << std::endl;
-
-		Sleep( 2000 );
 
 
-	}*/
+		//SetCursorPos( 30, 33 );
+		//mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
 
-	//================================
 
-	/*HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
-	PrintProcessList( hStdOut );
-	ExitProcess( 0 )*/;
+		//==========================================
+		//SetCursorPos(15, 15 );
+		/*POINT pt, pt2, buff;
+		while (1) {
+
+			GetCursorPos( &pt );
+			pt2 = pt;
+
+			std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
+			std::cout << "=========================" << std::endl;
+
+			Sleep( 2000 );
+
+
+		}*/
+
+		//================================
+
+		/*HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
+		PrintProcessList( hStdOut );
+		ExitProcess( 0 )*/;
 	return 0;
 }
 

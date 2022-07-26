@@ -152,12 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="getData_class.cpp" />
-    <ClCompile Include="setData_class.cpp" />
+    <ClCompile Include="mouse_class.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="getData_class.h" />
-    <ClInclude Include="setData_class.h" />
+    <ClInclude Include="mouse_class.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
