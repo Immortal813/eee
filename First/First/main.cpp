@@ -5,6 +5,12 @@
 #include <chrono>
 #include "mouse_class.hpp"
 
+/*
+
+Нужно сделать всё через указатель на дескриптор окна Paint и передавать адресс в класс mouse 
+
+*/
+
 
 VOID PrintModuleList( HANDLE CONST hStdOut, DWORD CONST dwProcessId ) {
 	MODULEENTRY32 meModuleEntry;
@@ -51,7 +57,7 @@ VOID PrintProcessList( HANDLE CONST hStdOut ) {
 }
 
 
-mouse_class glass;
+
 
 
 /*void start(  ) {
@@ -85,15 +91,30 @@ bool findAndOpenWin() {
 
 	HWND hWnd = FindWindow( NULL, TEXT( "Безымянный - Paint" ) );
 	bool check;
+	POINT pt;
 	if ( hWnd == NULL ) {
 
 		MessageBox( hWnd, TEXT( "Need open Paint" ), TEXT( "Error" ), MB_OK | MB_ICONSTOP );
 		check = 0;
 	}
 	else {
-		//Не отображает окно, если оно развернуто -_-
-		ShowWindow( hWnd, SW_MAXIMIZE );
+		//Разворачивает окно, елси оно свернуто 
+		ShowWindow( hWnd, SW_RESTORE );
+		//Функция делает активным необходимое окно
+		SetForegroundWindow( hWnd );
 		check = 1;
+	}
+
+	while ( 1 ) {
+
+		GetCursorPos( &pt );
+		//Берет координаты относительно выбранного окна 
+		ScreenToClient( hWnd, &pt );
+
+		std::cout << "X: " << pt.x << std::endl << "Y: " << pt.y << std::endl;
+		std::cout << "==================" << std::endl;
+		Sleep( 2000 );
+
 	}
 
 	return check;
@@ -136,7 +157,12 @@ void mouseClick() {
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
 
 	findAndOpenWin();
-	mouseClick();
+	
+	
+
+
+
+	//mouseClick();
 
 	//start();
 
@@ -185,7 +211,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
 /*int main() {
 
-	mouseCoord();
+	findAndOpenWin();
 
 }*/
 
