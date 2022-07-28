@@ -153,9 +153,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mouse_class.cpp" />
+    <ClCompile Include="window_class.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mouse_class.hpp" />
+    <ClInclude Include="window_class.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

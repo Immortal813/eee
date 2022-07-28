@@ -21,9 +21,15 @@
     <ClCompile Include="mouse_class.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="window_class.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mouse_class.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="window_class.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
