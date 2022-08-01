@@ -11,7 +11,7 @@ public:
 	void get_mouse_coord();
 	void get_mouse_coordWind();
 	void mouse_click();
-	mouse_class( HWND * hWnd );
+	mouse_class( HWND *hWnd );
 
 private:
 	
@@ -21,8 +21,6 @@ private:
 	// Я блять не разобался с задержкой потока, пока слищъком сложно. Чуть попозже попробую. Penis.
 	//std::chrono::milliseconds _mouse_click_delay;
 	
-
-
 
 };
 

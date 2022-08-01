@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <string.h>
+#include "mouse_class.hpp"
 
 class window_class {
 
