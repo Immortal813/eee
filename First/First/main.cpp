@@ -58,8 +58,6 @@ VOID PrintProcessList( HANDLE CONST hStdOut ) {
 
 
 
-
-
 /*void start(  ) {
 
 	ShellExecuteA( NULL, NULL, "mspaint", NULL, NULL, SW_MAXIMIZE );
@@ -157,7 +155,7 @@ void mouseClick() {
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
 
 	
-
+	window_class asd( "" );
 
 	findAndOpenWin();
 	
@@ -219,7 +217,6 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 }*/
 
 
-
 /*void start( std::string qwe ) {
 
 	ShellExecuteA( NULL, NULL, qwe.c_str(), NULL, NULL, SW_MAXIMIZE );
@@ -238,16 +235,3 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
 
 }*/
-
-
-
-
-//int main() {
-//
-//	
-//
-//	
-//	return 0;
-//
-//}
-
