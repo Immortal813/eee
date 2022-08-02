@@ -14,7 +14,7 @@ private:
 public:
 
 	//BOOL init();
-	window_class();
+	void win_init();
 	HWND getWindow();
 	void funcMain();
 

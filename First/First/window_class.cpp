@@ -1,30 +1,37 @@
 #include "window_class.h"
 
 
-window_class::window_class() {
+void window_class::win_init() {
 
 	// Возвращает дескриптор необходимого окна
 	hWnd = FindWindow( NULL, TEXT( "Безымянный - Paint" ) );
 
-	// Создание экземпляра класса мыши 
-	mouse_class mouse_a( &hWnd );
+	
 
 	if ( hWnd == NULL ) {
 
 		MessageBox( hWnd, TEXT( "Need open Paint" ), TEXT( "Error" ), MB_OK | MB_ICONSTOP );
-		
+
+		// Открывает необходимое окно
+		ShellExecuteA( NULL, NULL, "mspaint", NULL, NULL, SW_MAXIMIZE );
+		// Находим окно
+		hWnd = FindWindow( NULL, TEXT( "Безымянный - Paint" ) );
+		// Разворачивает окно, елси оно свернуто 
+		ShowWindow( hWnd, SW_RESTORE );
+		// Функция делает активным необходимое окно
+		SetForegroundWindow( hWnd );
 
 	 }
+
 	else {
-
-		//Разворачивает окно, елси оно свернуто 
-		ShowWindow( hWnd, SW_RESTORE );
-		//Функция делает активным необходимое окно
-		SetForegroundWindow( hWnd );
-		
-	}
-
 	
+		ShowWindow( hWnd, SW_RESTORE );
+		// Функция делает активным необходимое окно
+		SetForegroundWindow( hWnd );
+	
+	
+	}
+		
 
 }
 
@@ -38,6 +45,8 @@ HWND window_class::getWindow() {
 //
 void window_class::funcMain() {
 
+	mouse_class mouse_cl( &hWnd );
+	mouse_cl.mouse_click_relat();
 	 
 
 }

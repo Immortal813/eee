@@ -11,7 +11,8 @@ public:
 	void get_mouse_coord();
 	void get_mouse_coordWind();
 	void mouse_click();
-	mouse_class( HWND *hWnd );
+	void mouse_click_relat();
+	void set_mouseW( HWND *hWnd );
 
 private:
 	

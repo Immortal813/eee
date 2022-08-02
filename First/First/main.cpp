@@ -155,9 +155,10 @@ void mouseClick() {
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
 
 	
-	window_class asd( "" );
-
-	findAndOpenWin();
+	window_class wnd_cl();
+	wnd_cl.win_init();
+	wnd_cl.
+	//findAndOpenWin();
 	
 	
 
