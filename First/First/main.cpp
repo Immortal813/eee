@@ -155,9 +155,9 @@ void mouseClick() {
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
 
 	
-	window_class wnd_cl();
+	window_class wnd_cl;
 	wnd_cl.win_init();
-	wnd_cl.
+	wnd_cl.funcMain();
 	//findAndOpenWin();
 	
 	
@@ -211,11 +211,13 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
 
 
-/*int main() {
-
-	findAndOpenWin();
-
-}*/
+//int main() {
+//
+//	window_class wnd_cl;
+//	wnd_cl.win_init();
+//	wnd_cl.funcMain();
+//
+//}
 
 
 /*void start( std::string qwe ) {

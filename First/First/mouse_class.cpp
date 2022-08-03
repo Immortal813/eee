@@ -2,9 +2,9 @@
 
 // Метод вязть координат в вывод этого на экран. Нужно будеть поменять в Компановщик -> Подсистема -> Консоль
 
-void mouse_class::set_mouseW( HWND *hWnd ) {
+ mouse_class::mouse_class( HWND *hWnd ) {
 
-
+	 _window_handle = *hWnd;
 
 }
 
@@ -46,18 +46,21 @@ void mouse_class::mouse_click() {
 	SetCursorPos( 27, 44 );
 	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 27, 44, 0, 0 );
 	//=========
-	Sleep( 500 );
+	Sleep( 300 );
 	SetCursorPos( 66, 435 );
 	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 66, 435, 0, 0 );
-	Sleep( 500 );
+	
 	//=========
-	SetCursorPos( 756, 644 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 756, 644, 0, 0 );
-	Sleep( 500 );
+	Sleep( 300 );
+	SetCursorPos( 845, 655 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 845, 655, 0, 0 );
+	
 	//=========
-	SetCursorPos( 905, 642 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 905, 642, 0, 0 );
+	Sleep( 300 );
+	SetCursorPos( 995, 642 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 995, 642, 0, 0 );
 	//=========
+	Sleep( 300 );
 	SetCursorPos( 537, 74 );
 	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 537, 74, 0, 0 );
 	//=========ЗАЖАТЬ
@@ -78,24 +81,32 @@ void mouse_class::mouse_click_relat() {
 	SetCursorPos( 27, 44 );
 	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 27, 44, 0, 0 );
 	//=========
+
 	Sleep( 500 );
 	SetCursorPos( 66, 435 );
 	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 66, 435, 0, 0 );
+	//=========
+
 	Sleep( 500 );
+	SetCursorPos( 845, 655 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 845, 655, 0, 0 );
 	//=========
-	SetCursorPos( 756, 644 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 756, 644, 0, 0 );
+
 	Sleep( 500 );
+	SetCursorPos( 995, 662 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 995, 662, 0, 0 );
 	//=========
-	SetCursorPos( 905, 642 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 905, 642, 0, 0 );
-	//=========
-	SetCursorPos( 537, 74 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 537, 74, 0, 0 );
+
+	Sleep( 500 );
+	SetCursorPos( 537, 70 );
+	Sleep( 100 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 537, 70, 0, 0 );
+
 	//=========ЗАЖАТЬ
 	SetCursorPos( 425, 307 );
 	mouse_event( MOUSEEVENTF_LEFTDOWN, 425, 307, 0, 0 );
 	//=========ОТПУСТИТЬ
+
 	SetCursorPos( 635, 517 );
 	mouse_event( MOUSEEVENTF_LEFTUP, 635, 517, 0, 0 );
 

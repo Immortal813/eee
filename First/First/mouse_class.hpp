@@ -12,7 +12,7 @@ public:
 	void get_mouse_coordWind();
 	void mouse_click();
 	void mouse_click_relat();
-	void set_mouseW( HWND *hWnd );
+	mouse_class( HWND *hWnd );
 
 private:
 	
