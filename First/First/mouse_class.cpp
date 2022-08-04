@@ -75,39 +75,54 @@ void mouse_class::mouse_click() {
 //  ÎËÍË ÓÚÌÓÒËÚÂÎ¸ÌÓ ÓÍÌ‡
 
 void mouse_class::mouse_click_relat() {
-
+	
+	_mouse_pos = { 27, 44 };
 	ClientToScreen( _window_handle, &_mouse_pos );
-
-	SetCursorPos( 27, 44 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 27, 44, 0, 0 );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	Sleep( 3000 );
 	//=========
 
 	Sleep( 500 );
-	SetCursorPos( 66, 435 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 66, 435, 0, 0 );
+	_mouse_pos = { 66, 435 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
 	//=========
 
 	Sleep( 500 );
-	SetCursorPos( 845, 655 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 845, 655, 0, 0 );
+	_mouse_pos = { 845, 655 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
 	//=========
 
 	Sleep( 500 );
-	SetCursorPos( 995, 662 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 995, 662, 0, 0 );
+	_mouse_pos = { 955, 662 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
 	//=========
 
 	Sleep( 500 );
-	SetCursorPos( 537, 70 );
+	_mouse_pos = { 537, 70 };
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	ClientToScreen( _window_handle, &_mouse_pos );
 	Sleep( 100 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 537, 70, 0, 0 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
 
 	//=========«¿∆¿“‹
-	SetCursorPos( 425, 307 );
-	mouse_event( MOUSEEVENTF_LEFTDOWN, 425, 307, 0, 0 );
-	//=========Œ“œ”—“»“‹
+	_mouse_pos = { 425, 307 };
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	ClientToScreen( _window_handle, &_mouse_pos );
+	mouse_event( MOUSEEVENTF_LEFTDOWN, _mouse_pos.x, _mouse_pos.y, 0, 0 );
 
-	SetCursorPos( 635, 517 );
-	mouse_event( MOUSEEVENTF_LEFTUP, 635, 517, 0, 0 );
+	//=========Œ“œ”—“»“‹
+	_mouse_pos = { 635, 517 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	mouse_event( MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
 
 }

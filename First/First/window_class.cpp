@@ -25,7 +25,7 @@ void window_class::win_init() {
 
 	else {
 	
-		ShowWindow( hWnd, SW_RESTORE );
+		ShowWindow( hWnd, SW_MAXIMIZE );
 		// Функция делает активным необходимое окно
 		SetForegroundWindow( hWnd );
 	
