@@ -124,5 +124,13 @@ void mouse_class::mouse_click_relat() {
 	ClientToScreen( _window_handle, &_mouse_pos );
 	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
 	mouse_event( MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	Sleep( 200 );
+	//========= Красный цвет
+	_mouse_pos = { 956, 70 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	mouse_event( MOUSEEVENTF_LEFTDOWN, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	mouse_event( MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+
 
 }

@@ -158,6 +158,8 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 	window_class wnd_cl;
 	wnd_cl.win_init();
 	wnd_cl.funcMain();
+
+
 	//findAndOpenWin();
 	
 	
@@ -211,30 +213,15 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
 
 
-//int main() {
-//
-//	window_class wnd_cl;
-//	wnd_cl.win_init();
-//	wnd_cl.funcMain();
-//
-//}
+/*int main() {
 
-
-/*void start( std::string qwe ) {
-
-	ShellExecuteA( NULL, NULL, qwe.c_str(), NULL, NULL, SW_MAXIMIZE );
-
-}
-
-int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
-
-
-	//std::cout << "Start programm" << std::endl;
-
-	start( "mspaint" );
-
-
-	return 0;
-
-
+	//Вывод процессов
+	//HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
+	//PrintProcessList( hStdOut );
+	//ExitProcess( 0 );
+	
+	window_class wnd_cl;
+	wnd_cl.win_init();
+	wnd_cl.funcMain();
+	
 }*/
