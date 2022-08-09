@@ -8,10 +8,13 @@ class mouse_class {
 
 public:
 
-	void get_mouse_coord();
-	void get_mouse_coordWind();
+	void get_mouse_ScreenCoord();
+	void get_mouse_coordA_wind();
+	void get_mouse_coordM_wind();
+	void get_mouse_coordCH_wind();
 	void mouse_click();
 	void mouse_click_relat();
+	void mouse_test();
 	mouse_class( HWND *hWnd );
 
 private:

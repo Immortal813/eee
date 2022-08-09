@@ -17,7 +17,7 @@ void window_class::win_init() {
 		// Находим окно
 		hWnd = FindWindow( NULL, TEXT( "Безымянный - Paint" ) );
 		// Разворачивает окно, елси оно свернуто 
-		ShowWindow( hWnd, SW_MAXIMIZE );
+		ShowWindow( hWnd, SW_RESTORE );
 		// Функция делает активным необходимое окно
 		SetForegroundWindow( hWnd );
 
@@ -46,7 +46,9 @@ HWND window_class::getWindow() {
 void window_class::funcMain() {
 
 	mouse_class mouse_cl( &hWnd );
-	//mouse_cl.get_mouse_coordWind();
-	mouse_cl.mouse_click_relat();
+	//mouse_cl.get_mouse_coordM_wind();
+	//mouse_cl.get_mouse_coordCH_wind();
+	mouse_cl.get_mouse_coordA_wind();
+	//mouse_cl.mouse_click_relat();
 	 
 }
