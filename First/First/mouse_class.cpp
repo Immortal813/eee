@@ -110,11 +110,76 @@ void mouse_class::mouse_click() {
 
 }
 
-
+// ¬се относительно окно
 void mouse_class::mouse_test() {
 
-	_mouse_pos = { 29, 49 };
+	// лик файл
+	_mouse_pos = { 29, 42 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	Sleep( 3000 );
+	//=========
 
+	//—войства
+	Sleep( 500 );
+	_mouse_pos = { 97, 434 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	//=========
+
+	//ѕо умолчани€ю
+	Sleep( 500 );
+	_mouse_pos = { 62, 278 };
+	ClientToScreen( GetForegroundWindow(), &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	
+	//ScreenToClient( FindWindowExA( _window_handle, NULL, NULL, NULL ), &_mouse_pos );
+	
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	//=========
+
+	//ќк
+	Sleep( 500 );
+	_mouse_pos = { 213, 278 };
+	ClientToScreen( GetForegroundWindow(), &_mouse_pos );
+	//ScreenToClient( FindWindowExA( _window_handle, NULL, NULL, NULL ), &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	//=========
+
+	//ќвал
+	Sleep( 500 );
+	_mouse_pos = { 533, 70 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	Sleep( 100 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+
+	//=========«ј∆ј“№
+	_mouse_pos = { 329, 33 };
+	ClientToScreen( GetWindow( _window_handle, GW_CHILD ), &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	mouse_event( MOUSEEVENTF_LEFTDOWN, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+
+	//=========ќ“ѕ”—“»“№
+	_mouse_pos = { 495, 190 };
+	ClientToScreen( GetWindow( _window_handle, GW_CHILD ), &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	mouse_event( MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	Sleep( 200 );
+
+	//=========  расный цвет
+	_mouse_pos = { 953, 69 };
+	ClientToScreen( _window_handle, &_mouse_pos );
+	SetCursorPos( _mouse_pos.x, _mouse_pos.y );
+	Sleep( 200 );
+	mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, _mouse_pos.x, _mouse_pos.y, 0, 0 );
+	Sleep( 200 );
+	
 
 }
 

@@ -152,76 +152,76 @@ void mouseClick() {
 
 
 
-//int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
-//
-//	
-//	window_class wnd_cl;
-//	wnd_cl.win_init();
-//	wnd_cl.funcMain();
-//
-//
-//	//findAndOpenWin();
-//	
-//	
-//
-//
-//
-//	//mouseClick();
-//
-//	//start();
-//
-//	//LPCWSTR WindowsName = ( LPCWSTR)"mspaint";
-//
-//
-//	//=================================
-//	/*HWND h = FindWindowA( NULL, "Калькулятор" ); // Ищем HWND окна по имени
-//
-//
-//	if ( h == NULL )
-//		MessageBox( h, TEXT( "Необходимо открыть \"Калькулятор\"" ), TEXT( "Ошибка!!!" ), MB_OK | MB_ICONSTOP );*/
-//
-//
-//
-//
-//		//SetCursorPos( 30, 33 );
-//		//mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
-//
-//
-//		//==========================================
-//		//SetCursorPos(15, 15 );
-//		/*POINT pt, pt2, buff;
-//		while (1) {
-//
-//			GetCursorPos( &pt );
-//			pt2 = pt;
-//
-//			std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
-//			std::cout << "=========================" << std::endl;
-//
-//			Sleep( 2000 );
-//
-//
-//		}*/
-//
-//		//================================
-//
-//		/*HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
-//		PrintProcessList( hStdOut );
-//		ExitProcess( 0 )*/;
-//	return 0;
-//}
+int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd ) {
 
-
-
-int main() {
-
-	//Вывод процессов
-	//HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
-	//PrintProcessList( hStdOut );
-	//ExitProcess( 0 );
 	
 	window_class wnd_cl;
 	wnd_cl.win_init();
 	wnd_cl.funcMain();
+
+
+	//findAndOpenWin();
 	
+	
+
+
+
+	//mouseClick();
+
+	//start();
+
+	//LPCWSTR WindowsName = ( LPCWSTR)"mspaint";
+
+
+	//=================================
+	/*HWND h = FindWindowA( NULL, "Калькулятор" ); // Ищем HWND окна по имени
+
+
+	if ( h == NULL )
+		MessageBox( h, TEXT( "Необходимо открыть \"Калькулятор\"" ), TEXT( "Ошибка!!!" ), MB_OK | MB_ICONSTOP );*/
+
+
+
+
+		//SetCursorPos( 30, 33 );
+		//mouse_event( MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 30, 33, 0, 0 );
+
+
+		//==========================================
+		//SetCursorPos(15, 15 );
+		/*POINT pt, pt2, buff;
+		while (1) {
+
+			GetCursorPos( &pt );
+			pt2 = pt;
+
+			std::cout << "X: " << pt.x << "\n" << "Y: " << pt.y << std::endl;
+			std::cout << "=========================" << std::endl;
+
+			Sleep( 2000 );
+
+
+		}*/
+
+		//================================
+
+		/*HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
+		PrintProcessList( hStdOut );
+		ExitProcess( 0 )*/;
+	return 0;
 }
+
+
+
+//int main() {
+//
+//	//Вывод процессов
+//	//HANDLE CONST hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
+//	//PrintProcessList( hStdOut );
+//	//ExitProcess( 0 );
+//	
+//	window_class wnd_cl;
+//	wnd_cl.win_init();
+//	wnd_cl.funcMain();
+//	
+//}
